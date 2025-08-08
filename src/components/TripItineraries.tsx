@@ -17,7 +17,7 @@ const TripItineraries: React.FC = () => {
                         <PlaneIcon className="w-5 h-5"/>
                         <h2>Flights</h2>
                     </div>
-                    <button className="text-sm text-blue-500 bg-white px-5 py-2.5">Add flights</button>
+                    <button className="text-sm text-blue-500 bg-white px-5 py-2.5 ">Add flights</button>
                 </div>
                 <div className="mb-6">
                     <FlightCard />
