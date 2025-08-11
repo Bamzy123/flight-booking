@@ -1,5 +1,5 @@
 import React from 'react';
-import { AmericanAirlinesLogo } from '../icons';
+import { AmericanAirlinesLogo } from '../../icons';
 import { BaggageClaim, Clapperboard, Utensils, Usb, PlaneTakeoff, PlaneLanding, X } from 'lucide-react';
 
 const FlightCard: React.FC = () => {

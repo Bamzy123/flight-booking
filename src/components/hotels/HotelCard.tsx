@@ -1,5 +1,5 @@
 import React from 'react';
-import water from '../assets/water.png';
+import water from '../../assets/water.png';
 import { ChevronLeft, ChevronRight, MapPin, Star, Bed, Waves, Martini, Calendar, X } from 'lucide-react';
 
 const HotelCard: React.FC = () => {

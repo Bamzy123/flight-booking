@@ -1,32 +1,49 @@
-
 import React, { useState } from 'react';
-import user from '../assets/face.png'
+import user from '../../assets/face.png'
 import { LogoIcon, SearchIcon, HomeIcon, DashboardIcon, WalletIcon, PlanTripIcon, CommissionIcon, BellIcon,
-    CartIcon, CreateIcon, ChevronDownIcon, MenuIcon, CloseIcon } from '../icons';
+    CartIcon, CreateIcon, ChevronDownIcon, MenuIcon, CloseIcon } from '../../icons';
+import { useNavigate } from "react-router-dom";
 
 interface NavItemProps {
     icon: React.ReactNode;
     label: string;
     active?: boolean;
+    onClick?: () => void;
 }
 
-const NavItem: React.FC<NavItemProps> = ({ icon, label, active = false }) => (
-    <a
-        href="#"
+const NavItem: React.FC<NavItemProps> = ({ icon, label, active = false, onClick }) => (
+    <button
+        onClick={onClick}
         className={`flex flex-col items-center gap-1.5 text-slate-600 hover:text-blue-600 transition-colors px-2 py-1 rounded-md ${
             active ? 'font-bold text-slate-800' : 'font-medium'
         }`}
     >
         <div className="w-6 h-6">{icon}</div>
         <span className="text-xs tracking-tight">{label}</span>
-    </a>
+    </button>
 );
 
 const Header: React.FC = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const navigate = useNavigate();
+
+    const handleNavigation = (label: string) => {
+        const routes: { [key: string]: string } = {
+            'Home': '/',
+            'Dashboard': '/dashboard',
+            'Wallet': '/wallet',
+            'Plan a trip': '/plan-trip',
+            'Commission for life': '/commission'
+        };
+
+        const route = routes[label];
+        if (route) {
+            navigate(route);
+        }
+    };
 
     const navLinks = [
-        { icon: <HomeIcon />, label: 'Home'},
+        { icon: <HomeIcon />, label: 'Home' },
         { icon: <DashboardIcon />, label: 'Dashboard' },
         { icon: <WalletIcon />, label: 'Wallet' },
         { icon: <PlanTripIcon />, label: 'Plan a trip', active: true },
@@ -54,7 +71,13 @@ const Header: React.FC = () => {
 
                     <nav className="hidden lg:flex items-center gap-4">
                         {navLinks.map((link) => (
-                            <NavItem key={link.label} icon={link.icon} label={link.label} active={link.active} />
+                            <NavItem
+                                key={link.label}
+                                icon={link.icon}
+                                label={link.label}
+                                active={link.active}
+                                onClick={() => handleNavigation(link.label)}
+                            />
                         ))}
                     </nav>
 
@@ -115,7 +138,13 @@ const Header: React.FC = () => {
                         </div>
                         <nav className="grid grid-cols-2 sm:grid-cols-3 gap-y-4">
                             {navLinks.map((link) => (
-                                <NavItem key={link.label} icon={link.icon} label={link.label} active={link.active} />
+                                <NavItem
+                                    key={link.label}
+                                    icon={link.icon}
+                                    label={link.label}
+                                    active={link.active}
+                                    onClick={() => handleNavigation(link.label)}
+                                />
                             ))}
                         </nav>
                         <div className="mt-4 pt-4 border-t border-slate-200 flex flex-col gap-4">

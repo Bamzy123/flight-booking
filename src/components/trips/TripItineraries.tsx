@@ -1,7 +1,7 @@
 import React from "react"
-import FlightCard from "../components/FlightCard";
-import HotelCard from "../components/HotelCard.tsx";
-import ActivitiesCard from "../components/ActivitiesCard.tsx";
+import FlightCard from "../flights/FlightCard.tsx";
+import HotelCard from "../hotels/HotelCard.tsx";
+import ActivitiesCard from "../activities/ActivitiesCard.tsx";
 import {ActivityIcon, HotelIcon, PlaneIcon} from "lucide-react";
 
 const TripItineraries: React.FC = () => {

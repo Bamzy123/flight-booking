@@ -1,12 +1,6 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Activity, Building, Plane, GraduationCap, FileText, Briefcase,
-    Plus,
-    ChevronDown,
-    Menu,
-    X,
-    Package
-} from 'lucide-react';
+import { Activity, Building, Plane, GraduationCap, FileText, Briefcase, Plus, ChevronDown, Menu, X, Package } from 'lucide-react';
 
 const MenuItems = ({ collapsed, isMobile }: { collapsed?: boolean; isMobile?: boolean }) => {
     const navigate = useNavigate();

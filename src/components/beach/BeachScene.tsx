@@ -1,9 +1,9 @@
 import React from 'react';
-import sun from '../assets/Sun.png'
-import beach from '../assets/sand.png'
-import palmTree from '../assets/stick.png'
-import clouds from '../assets/cloud.png'
-import tree from '../assets/tree.png'
+import sun from '../../assets/Sun.png'
+import beach from '../../assets/sand.png'
+import palmTree from '../../assets/stick.png'
+import clouds from '../../assets/cloud.png'
+import tree from '../../assets/tree.png'
 
 const BeachScene: React.FC = () => {
     return (

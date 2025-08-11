@@ -34,7 +34,7 @@ const ActivityCards: React.FC = () => {
                 <p className="text-white text-xs sm:text-sm mb-4 sm:mb-6 leading-relaxed">
                     Build, personalize, and optimize your itineraries with our trip planner.
                 </p>
-                <button className="bg-white text-blue-500 border-2 border-white px-8 py-2 rounded font-medium hover:bg-purple-50 transition-colors text-sm w-full">
+                <button className="bg-white text-blue-500 border-white px-8 py-2 rounded font-medium hover:bg-purple-600 transition-colors text-sm w-full">
                     Add Flights
                 </button>
             </div>

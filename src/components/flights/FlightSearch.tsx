@@ -26,8 +26,8 @@ const FlightSearch = () => {
                 departDate: departDate, // Try YYYY-MM-DD format
                 returnDate: returnDate,
                 stops: 'none',
-                pageNo: 1, // Number instead of string
-                adults: 1, // Number instead of string
+                pageNo: 1,
+                adults: 1,
                 children: '0',
                 sort: 'BEST',
                 cabinClass: 'ECONOMY',

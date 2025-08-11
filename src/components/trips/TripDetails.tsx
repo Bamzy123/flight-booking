@@ -1,7 +1,7 @@
 import React from 'react';
-import profile from '../assets/profile.png';
-import gear from '../assets/GearSix.png';
-import userProfiles from '../assets/Vector.png';
+import profile from '../../assets/profile.png';
+import gear from '../../assets/GearSix.png';
+import userProfiles from '../../assets/Vector.png';
 
 const TripDetails: React.FC = () => {
     return (

@@ -1,13 +1,13 @@
 import React from 'react';
 import { Routes, Route, Outlet } from 'react-router-dom';
-import Header from './components/Header';
-import Sidebar from './components/Sidebar';
-import BeachScene from './components/BeachScene';
-import TripDetails from './components/TripDetails';
-import ActivityCards from './components/ActivityCards.tsx';
-import TripPlanningPage from './components/TripPlanningPage.tsx';
-import TripItineraries from "./components/TripItineraries.tsx";
-import FlightSearch from "./components/FlightSearch.tsx";
+import Header from './components/header/Header.tsx';
+import Sidebar from './components/sidebar/Sidebar.tsx';
+import BeachScene from './components/beach/BeachScene.tsx';
+import TripDetails from './components/trips/TripDetails.tsx';
+import ActivityCards from './components/activities/ActivityCards.tsx';
+import TripPlanningPage from './components/trips/TripPlanningPage.tsx';
+import TripItineraries from "./components/trips/TripItineraries.tsx";
+import FlightSearch from "./components/flights/FlightSearch.tsx";
 
 const Layout: React.FC = () => (
     <div className="bg-custom-gray min-h-screen font-sans">
@@ -45,5 +45,4 @@ const App: React.FC = () => {
         </Routes>
     );
 };
-
 export default App;

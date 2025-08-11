@@ -1,5 +1,5 @@
 import React from 'react';
-import art from '../assets/art.png'
+import art from '../../assets/art.png'
 import { ChevronLeft, ChevronRight, MapPin, Star, X, Clock } from 'lucide-react';
 
 const ActivitiesCard: React.FC = () => {
